@@ -1,7 +1,6 @@
 from django.urls import path
 
-from django_bus.views.asyncapi import AsyncAPIV3DocsView, AsyncAPIV3JsonView
-
+from django_asyncapi.views.v3.asyncapi import AsyncAPIV3DocsView, AsyncAPIV3JsonView
 
 urlpatterns = [
     path("asyncapi/v3/", AsyncAPIV3DocsView.as_view()),

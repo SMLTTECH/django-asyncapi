@@ -57,7 +57,7 @@ class MySpecialServiceAsyncAPISpecV3(SimpleSpecV3):
 
 `"shop.orders.v1"` means topic to which our service produces(sends) message described as `OrderSchemaV1` pydantic model.
 
-2. Add `djanog-asyncapi` to `INSTALLED_APPS
+2. Add `djanog-asyncapi` to `INSTALLED_APPS`
 ```python 
 INSTALLED_APPS = [
     ...,

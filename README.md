@@ -3,10 +3,15 @@
 Generate and host your asyncapi specification using pydantic models
 
 
+## Installation
+
+Install `django-asyncapi` using `pip` or `poetry`:
+
+```
+poetry add django-asyncapi
+```
 
 ## Usage
-
-
 
 1. Create specification
 
@@ -50,6 +55,8 @@ class MySpecialServiceAsyncAPISpecV3(SimpleSpecV3):
 
 ```
 
+`"shop.orders.v1"` means topic to which our service produces(sends) message described as `OrderSchemaV1` pydantic model.
+
 2. Add `djanog-asyncapi` to `INSTALLED_APPS
 ```python 
 INSTALLED_APPS = [
@@ -78,5 +85,7 @@ urlpatterns = [
 
 ```
 
-5. Enjoy your result
+5. Enjoy your results by opening `docs/asyncapi/v3`
+
+![alt text](docs/img/result.png)
 

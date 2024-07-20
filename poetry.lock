@@ -99,13 +99,13 @@ tests = ["mypy (>=0.800)", "pytest", "pytest-asyncio"]
 
 [[package]]
 name = "asyncapi-container"
-version = "0.4.1"
+version = "0.4.2"
 description = ""
 optional = false
 python-versions = "<4.0,>=3.10"
 files = [
-    {file = "asyncapi_container-0.4.1-py3-none-any.whl", hash = "sha256:9266b4873d8198760af1a6429d65af39e07027d77eabb469a8fd55282a45d8b8"},
-    {file = "asyncapi_container-0.4.1.tar.gz", hash = "sha256:75c2df106d2f3836ab1d26c485dee4829a694d8df24a09f7597652254cd0ca06"},
+    {file = "asyncapi_container-0.4.2-py3-none-any.whl", hash = "sha256:4098551d44cd7bcfece66c7e4f5be0cb7bb4b1308e943ddbc51f372aa62472ee"},
+    {file = "asyncapi_container-0.4.2.tar.gz", hash = "sha256:04f10b147005120c6687993f94a0563537494b1a4f96fa6eeaeb5e3cb3f02eae"},
 ]
 
 [package.dependencies]
@@ -1838,4 +1838,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "2633c0f2cdc75c138cb44b303d73d35409c3e691cf5d136c822aafab63e2a2c9"
+content-hash = "240c6e00f66f770d4eaed36fc2599ee1819fd4107fddb4c0cdf781c10dc8e61c"

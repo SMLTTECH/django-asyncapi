@@ -1,4 +1,5 @@
-    <!DOCTYPE html>
+{% load static %}
+<!DOCTYPE html>
     <html>
         <head>
 
@@ -8,7 +9,7 @@
         <link rel="icon" type="image/png" sizes="16x16" href="https://www.asyncapi.com/favicon-16x16.png">
         <link rel="icon" type="image/png" sizes="32x32" href="https://www.asyncapi.com/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="194x194" href="https://www.asyncapi.com/favicon-194x194.png">
-        <link rel="stylesheet" href="https://unpkg.com/@asyncapi/react-component@1.2.11/styles/default.min.css">
+        <link rel="stylesheet" href="{% static 'css/asyncapi_component_2.1.0.css' %}">
         </head>
 
         <style>
@@ -21,8 +22,8 @@
         <body>
         <div id="asyncapi"></div>
 
-        <script src="https://unpkg.com/@asyncapi/react-component@1.2.11/browser/standalone/index.js"></script>
-        {{ asyncapi_json|json_script:"asyncapi_json" }}
+    <script src="{% static 'js/asyncapi_component_2.1.0.js' %}"></script>
+            {{ asyncapi_json|json_script:"asyncapi_json" }}
         <script>
             const asyncapi_as_json = JSON.parse(document.getElementById('asyncapi_json').textContent);
             AsyncApiStandalone.render(asyncapi_as_json, document.getElementById('asyncapi'));

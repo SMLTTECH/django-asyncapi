@@ -1,8 +1,8 @@
-# SimpleSpec
+# Channel
 
 
 ```{eval-rst}
-.. automodule:: asyncapi_container.containers.v3.simple_spec
+.. automodule:: asyncapi_container.containers.v3.simple_channels
     :members:
 
 
@@ -10,16 +10,7 @@
 
 
 
-
-Define pydantic model and include it inside a list `sends` or `receives`
-
 ```python
-
-from asyncapi_container.asyncapi.spec.v3.info import Info
-from asyncapi_container.containers.v3.simple_spec import SimpleSpecV3
-from asyncapi_container.custom_types import RoutingMap
-from pydantic import BaseModel, Field
-
 
 class Customer(BaseModel):
     first_name: str = Field(..., title='First Name')
@@ -44,23 +35,18 @@ class MySpecialServiceAsyncAPISpecV3(SimpleSpecV3):
         version="1.0.0",
         description="Service for making orders"
     )
-    sends: RoutingMap = {
-        "shop.orders.v1": [
-            OrderSchemaV1,
+    sends: RoutingMap = {}
+    receives: RoutingMap = {
+        TopicV3(
+            address="test.topic.v1",
+            title="TESTING TITLE",
+            description="test",
+            summary="testing summary",
+            tags=[
+                Tag(name="test"),
+            ]
+        ): [
+            Customer
         ]
     }
-    receives: RoutingMap = {}
-
-```
-
-Result:
-
-![result](../assets/img/result.png)
-test
-
-```{eval-rst}
-.. autoattrs:: django_asyncapi.settings.DjangoAsyncapiSettings
-    :members:
-
-
 ```

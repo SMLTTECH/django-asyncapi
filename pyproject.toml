@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "django-asyncapi"
-version = "0.3.1"
+version = "0.3.2"
 description = ""
 authors = ["Sergei Konik <s.konik.dev@gmail.com>"]
 readme = "README.md"

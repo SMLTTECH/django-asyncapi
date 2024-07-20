@@ -1,10 +1,8 @@
-from django.conf import settings
-from pydantic import PyObject, BaseModel
+from pydantic import PyObject, BaseModel, Field
 
 
 class DjangoAsyncapiSettings(BaseModel):
-    ASYNCAPI_SPEC_CLASS: list[PyObject] | PyObject
-
-
-DJANGO_ASYNCAPI_SETTINGS = getattr(settings, "DJANGO_ASYNCAPI", {})
-django_asyncapi_settings = DjangoAsyncapiSettings(**DJANGO_ASYNCAPI_SETTINGS)
+    ASYNCAPI_SPEC_CLASS: list[PyObject] | PyObject = Field(
+        ...,
+        description="Path to class containing entrypoint for defining root of asyncapi specification"
+    )

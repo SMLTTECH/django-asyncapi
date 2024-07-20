@@ -2,7 +2,7 @@ from collections import defaultdict
 
 from asyncapi_container.containers.v3.simple_spec import SimpleSpecV3
 
-from django_asyncapi.settings import django_asyncapi_settings
+from django_asyncapi.import_settings import django_asyncapi_settings
 
 
 class BusRoutingsMerger:

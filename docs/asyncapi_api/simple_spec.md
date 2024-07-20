@@ -1,19 +1,17 @@
-# django-asyncapi
-
-Generate and host your asyncapi specification using pydantic models
+# SimpleSpec
 
 
-## Installation
+```{eval-rst}
+.. automodule:: asyncapi_container.containers.v3.simple_spec
+    :members:
 
-Install `django-asyncapi` using `pip` or `poetry`:
 
 ```
-poetry add django-asyncapi
-```
 
-## Usage
 
-1. Create specification
+
+
+Define pydantic model and include it inside a list `sends` or `receives`
 
 ```python
 
@@ -55,37 +53,14 @@ class MySpecialServiceAsyncAPISpecV3(SimpleSpecV3):
 
 ```
 
-`"shop.orders.v1"` means topic to which our service produces(sends) message described as `OrderSchemaV1` pydantic model.
+Result:
 
-2. Add `djanog-asyncapi` to `INSTALLED_APPS`
-```python 
-INSTALLED_APPS = [
-    ...,
-    "django_asyncapi",
-]
-```
+![result](../assets/img/result.png)
+test
 
-3. Setup configuration inside `settings.py`
-```python
+```{eval-rst}
+.. autoattrs:: django_asyncapi.settings.DjangoAsyncapiSettings
+    :members:
 
-DJANGO_ASYNCAPI = {
-    "ASYNCAPI_SPEC_CLASS": "bus.routing.MySpecialServiceAsyncAPISpecV3",
-}
- 
-```
-
-4. Add `django-asyncapi` urls
-
-```python
-from django.urls import path, include
-
-urlpatterns = [
-    path('docs/', include('django_asyncapi.urls')),
-]
 
 ```
-
-5. Enjoy your results by opening `docs/asyncapi/v3`
-
-![alt text](docs/assets/img/result.png)
-

@@ -87,5 +87,22 @@ urlpatterns = [
 
 5. Enjoy your results by opening `docs/asyncapi/v3`
 
-![alt text](docs/assets/img/result.png)
+![alt text](assets/img/result.png)
 
+
+
+
+
+## Index
+
+```{eval-rst}
+
+
+.. toctree::
+   :maxdepth: 2
+    
+   api
+   tutorial
+   config
+
+```
